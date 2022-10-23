@@ -5,7 +5,7 @@
 #include <string_view>
 #include <unordered_map>
 
-#include <glm/matrix.hpp>
+#include <glm/glm.hpp>
 
 enum class ShaderType {
     NONE = -1, VERTEX, FRAGMENT
@@ -23,6 +23,9 @@ public:
     void setUniform(std::string_view name, float v0, float v1) const;
     void setUniform(std::string_view name, float v0, float v1, float v2) const;
     void setUniform(std::string_view name, float v0, float v1, float v2, float v3) const;
+    void setUniform(std::string_view name, const glm::vec2& vec2) const;
+    void setUniform(std::string_view name, const glm::vec3& vec3) const;
+    void setUniform(std::string_view name, const glm::vec4& vec4) const;
     void setUniform(std::string_view name, int v0) const;
     void setUniform(std::string_view name, int v0, int v1) const;
     void setUniform(std::string_view name, int v0, int v1, int v2) const;

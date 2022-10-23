@@ -100,6 +100,7 @@
     <ClCompile Include="src\Renderer\Shader.cpp" />
     <ClCompile Include="src\Renderer\Texture.cpp" />
     <ClCompile Include="src\Core\Window.cpp" />
+    <ClCompile Include="src\Scene\ColorCube.cpp" />
     <ClCompile Include="src\Scene\TextureCube.cpp" />
     <ClCompile Include="vendor\glad\glad.c" />
     <ClCompile Include="vendor\glm\detail\glm.cpp" />
@@ -270,6 +271,7 @@
     <ClInclude Include="src\Renderer\Shader.h" />
     <ClInclude Include="src\Renderer\Texture.h" />
     <ClInclude Include="src\Core\Window.h" />
+    <ClInclude Include="src\Scene\ColorCube.h" />
     <ClInclude Include="src\Scene\IScene.h" />
     <ClInclude Include="src\Scene\Menu.h" />
     <ClInclude Include="src\Scene\TextureCube.h" />
@@ -572,6 +574,24 @@
   </ItemGroup>
   <ItemGroup>
     <Image Include="res\textures\celst.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="res\shaders\Color_VP.glsl" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="res\shaders\Color_FP.glsl">
+      <FileType>Document</FileType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="res\shaders\Light_FP.glsl">
+      <FileType>Document</FileType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="res\shaders\Light_VP.glsl">
+      <FileType>Document</FileType>
+    </None>
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

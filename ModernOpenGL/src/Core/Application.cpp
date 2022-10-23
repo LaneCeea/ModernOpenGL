@@ -7,6 +7,7 @@
 #include "Core/Timer.h"
 #include "Scene/Menu.h"
 #include "Scene/TextureCube.h"
+#include "Scene/ColorCube.h"
 
 Application::Application()
     : m_Window(nullptr) {
@@ -22,6 +23,7 @@ void Application::run() {
     curr = menu;
         
     menu->registerScene<scene::TextureCube>();
+    menu->registerScene<scene::ColorCube>();
     
     m_LastFrameTime = Timer::getTime();
     while (!m_Window->shouldClose()) {

@@ -47,7 +47,9 @@ static void APIENTRY _ErrorCallBack(
     case GL_DEBUG_SEVERITY_NOTIFICATION:    severity_str = "notification";  logtype = LogType::INFO;    break;
     default:                                severity_str = "";              logtype = LogType::NONE;    break;
     }
-    if (severity == GL_DEBUG_SEVERITY_NOTIFICATION) return;
+
+    if (id == 131185) return;
+
     Log(logtype,
         "[OpenGL Log](%u)\n"
         "Source: %s\n"
@@ -100,7 +102,7 @@ bool initGLAD() {
     glEnable(GL_DEPTH_TEST);
     glEnable(GL_BLEND);
     glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);
-    glClearColor(0.2f, 0.3f, 0.3f, 1.0f);
+    glClearColor(0.1f, 0.1f, 0.1f, 1.0f);
 
     return true;
 }

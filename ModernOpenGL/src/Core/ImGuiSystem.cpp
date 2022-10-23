@@ -41,7 +41,8 @@ void newFrame() {
 void render() {
     {
         ImGui::Begin("Dear ImGui Debugger");
-        ImGui::Text("Application average %.3f ms/frame (%.1f FPS)", 1000.0f / ImGui::GetIO().Framerate, ImGui::GetIO().Framerate);
+        ImGui::Text("Application average %.3f ms/frame (%.1f FPS).", 1000.0f / ImGui::GetIO().Framerate, ImGui::GetIO().Framerate);
+        ImGui::Text("Hit ESC to enable/disable cursor.");
         ImGui::End();
     }
     ImGui::Render();

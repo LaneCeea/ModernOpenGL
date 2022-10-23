@@ -9,7 +9,7 @@
 #include <string_view>
 
 #include <glad/glad.h>
-#include <glm/matrix.hpp>
+#include <glm/glm.hpp>
 #include <glm/gtc/type_ptr.hpp>
 
 #include "Core/Log.h"
@@ -80,6 +80,18 @@ void Shader::setUniform(std::string_view name, float v0, float v1, float v2) con
 void Shader::setUniform(std::string_view name, float v0, float v1, float v2, float v3) const {
     int location = _GetUniformLocation(name.data());
     glUniform4f(location, v0, v1, v2, v3);
+}
+
+void Shader::setUniform(std::string_view name, const glm::vec2& vec2) const {
+    setUniform(name, vec2.x, vec2.y);
+}
+
+void Shader::setUniform(std::string_view name, const glm::vec3& vec3) const {
+    setUniform(name, vec3.x, vec3.y, vec3.z);
+}
+
+void Shader::setUniform(std::string_view name, const glm::vec4& vec4) const {
+    setUniform(name, vec4.x, vec4.y, vec4.z, vec4.w);
 }
 
 void Shader::setUniform(std::string_view name, int v0) const {

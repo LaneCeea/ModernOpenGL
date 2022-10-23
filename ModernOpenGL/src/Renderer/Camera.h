@@ -6,7 +6,7 @@
 #include <glm/gtc/matrix_transform.hpp>
 
 enum class CameraMovement {
-    NONE = 0, FORWARD, BACKWARD, LEFT, RIGHT,
+    NONE = 0, FORWARD, BACKWARD, LEFT, RIGHT, UP, DOWN
 };
 
 class Camera {

@@ -109,8 +109,7 @@ void TextureCube::onRender() {
     m_Shader.unbind();
 }
 
-void TextureCube::onImGuiRender()
-{
+void TextureCube::onImGuiRender() {
 }
 
 } // namespace scene

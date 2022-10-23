@@ -81,6 +81,9 @@
     <ClCompile Include="src\Core\Timer.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="src\Scene\ColorCube.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="vendor\stb\stb_image.h">
@@ -1013,6 +1016,9 @@
     <ClInclude Include="src\Core\Timer.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="src\Scene\ColorCube.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <None Include="res\shaders\Basic_VP.glsl">
@@ -1432,6 +1438,10 @@
       <Filter>Header Files</Filter>
     </None>
     <None Include="imgui.ini" />
+    <None Include="res\shaders\Color_VP.glsl" />
+    <None Include="res\shaders\Color_FP.glsl" />
+    <None Include="res\shaders\Light_FP.glsl" />
+    <None Include="res\shaders\Light_VP.glsl" />
   </ItemGroup>
   <ItemGroup>
     <Image Include="res\textures\celst.png">

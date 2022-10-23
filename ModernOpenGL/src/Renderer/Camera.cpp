@@ -12,10 +12,12 @@ Camera::Camera()
 }
 
 void Camera::onUpdate(float dt) {
-    if (Input::isKeyPressed(Key::W)) _Move(CameraMovement::FORWARD, dt);
-    if (Input::isKeyPressed(Key::S)) _Move(CameraMovement::BACKWARD, dt);
-    if (Input::isKeyPressed(Key::A)) _Move(CameraMovement::LEFT, dt);
-    if (Input::isKeyPressed(Key::D)) _Move(CameraMovement::RIGHT, dt);
+    if (Input::isKeyPressed(Key::W))            _Move(CameraMovement::FORWARD, dt);
+    if (Input::isKeyPressed(Key::S))            _Move(CameraMovement::BACKWARD, dt);
+    if (Input::isKeyPressed(Key::A))            _Move(CameraMovement::LEFT, dt);
+    if (Input::isKeyPressed(Key::D))            _Move(CameraMovement::RIGHT, dt);
+    if (Input::isKeyPressed(Key::Space))        _Move(CameraMovement::UP, dt);
+    if (Input::isKeyPressed(Key::LeftShift))    _Move(CameraMovement::DOWN, dt);
 
     bool CameraEnabled = Application::get().getWindow().isCursorDisabled();
     if (!CameraEnabled) {
@@ -53,6 +55,14 @@ void Camera::_Move(CameraMovement dir, float dt) {
 
     case CameraMovement::RIGHT:
         dir_v = m_Right;
+        break;
+
+    case CameraMovement::UP:
+        dir_v = m_Up;
+        break;
+
+    case CameraMovement::DOWN:
+        dir_v = -m_Up;
         break;
 
     default:
